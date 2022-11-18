@@ -47,9 +47,9 @@
   line-height: calc(30 / 16);
   letter-spacing: 0.06em;
   color: var(--text-color-hero);
-}
 
-.hero-btn:hover,
-.hero-btn:focus {
-  background: var(--hero-hover-color);
+  &:hover,
+  &:focus {
+    background: var(--hero-hover-color);
+  }
 }
