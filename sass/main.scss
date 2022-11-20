@@ -1,6 +1,11 @@
 @import "./utils/variables";
-@import "./base/common";
+@import "./utils/mixins";
+@import "./utils/placeholders";
 @import "./utils/hidden-content";
+
+@import "./base/common";
+
+@import "./components/container";
 @import "./components/backdrop";
 @import "./components/modal";
 
