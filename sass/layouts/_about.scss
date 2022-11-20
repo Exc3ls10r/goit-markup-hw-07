@@ -1,54 +1,52 @@
-.about.section {
-  padding-top: 0;
+.about {
+  @include section (0, 94px);
 }
 
-.about-title {
+.about__title {
+  @include title;
+  @include font (36px, calc(42 / 36), null, .03em);
+
   margin-bottom: 50px;
-
-  font-size: 36px;
-  line-height: calc(42 / 36);
   text-align: center;
-  letter-spacing: 0.03em;
 }
 
-.about-list {
+.about__list {
+  @include list;
   margin-bottom: 0;
 
   display: flex;
 }
 
-.about-item+.about-item {
-  margin-left: 30px;
+.about__item {
+  margin-right: 30px;
+
+  &:last-child {
+    margin-right: 0;
+  }
 }
 
-.about-thumb {
+.about__thumb {
   position: relative;
 }
 
-.about-image {
+.about__illustration {
   display: block;
   max-width: 100%;
   height: auto;
 }
 
-.about-label {
+.about__label {
   position: absolute;
   bottom: 0;
   left: 0;
-
   width: 100%;
   min-height: 70px;
-  margin-top: 0;
   margin-bottom: 0;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+
+  @include text (var(--text-color-hero));
+  @include flex-center;
+  @include font (14px, calc(16 / 14), 700, .03em);
 
   background-color: rgba(47, 48, 58, 0.8);
-  font-weight: 700;
-  font-size: 14px;
-  line-height: calc(16 / 14);
-  letter-spacing: 0.03em;
   text-transform: uppercase;
-  color: var(--text-color-hero);
 }
